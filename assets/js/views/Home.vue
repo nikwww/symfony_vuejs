@@ -10,6 +10,13 @@
                 :product="product"
                 :key="i"
                 />
+
+            <button
+                class="btn btn-primary"
+                @click="fetchRandProducts"
+                >
+                Reroll
+            </button>
         </div>
 
         <div>
@@ -25,12 +32,14 @@
         <button
             @click="fetchProducts(pagination.previous)"
             :disabled="!pagination.previous"
+            class="btn btn-primary"
             >
             Previous Page
         </button>
         <button
             @click="fetchProducts(pagination.next)"
             :disabled="!pagination.next"
+            class="btn btn-primary"
             >
             Next Page
         </button>
